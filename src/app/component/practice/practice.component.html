@@ -1,0 +1,44 @@
+<p>practice works!</p>
+<!-- <div>
+  <input type="file" (change)="onFileSelected($event)" />
+</div>
+
+
+<div *ngIf="uploadProgress !== null">
+  <p>Upload Progress: {{ uploadProgress }}%</p>
+</div>
+
+<div *ngIf="selectedFile">
+  <img [src]="imageUrl"  alt="Selected Image" />
+</div> -->
+
+
+<button (touchstart)="handleButtonTouchStart($event)" (touchmove)="handleButtonTouchMove($event)" (touchend)="handleButtonTouchEnd($event)">
+  Drag me!
+</button>
+
+
+<input type="checkbox" id="menu">
+<label for="menu" class="icon">
+        <div class="menu"></div>
+ </label>
+
+<nav>
+    <ul>
+        <li>
+            <i class="material-icons">sentiment_very_satisfied</i>Grade A 
+        </li>
+        <li>
+            <i class="material-icons">sentiment_satisfied</i>Grade B
+        </li>
+        <li>
+            <i class="material-icons">sentiment_neutral</i>Grade C
+        </li>
+        <li>
+            <i class="material-icons">sentiment_dissatisfied</i>Grade D
+        </li>
+        <li>
+            <i class="material-icons">sentiment_very_dissatisfied</i>Grade E
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,207 @@
+<!-- <p>staffdashboard works!</p>
+<button (click)="logout()">logout</button> -->
+
+<div *ngIf="showsplash" class="splashbackground" >
+
+<div   class="splashbody">
+<div   (touchstart)="handleButtonTouchUp()"  id="hand">
+<img  src="/assets/images/hand2.png" alt="">
+</div>
+
+
+</div>
+
+</div> 
+
+
+<div class="background">
+    <div class="container">
+        <div class="header">
+            <div class="navs">
+                <div class="nave">   
+                                 <input type="checkbox" id="menu">
+                <label for="menu" class="icon">
+                        <div class="menu"></div>
+                 </label>
+                
+                <nav>
+                    <ul>
+                        <!-- <li>
+                            <i id="li" class="bi bi-house-fill"></i>Grade E
+                        </li> -->
+                        <li>
+                            <i (click)="addproduct()" id="li" class="bi bi-bag-plus-fill">&nbsp;&nbsp;Add_Product</i>
+                        </li>
+                        <li>
+                            <i id="li" class="bi bi-building-add">&nbsp;&nbsp;Add_Restaurant</i>
+                        </li>
+                        <li>
+                            <i id="li" class="bi bi-bar-chart">&nbsp;&nbsp;Analysis</i> 
+                        </li>
+                        <li>
+                            <i id="li" class="bi bi-truck">&nbsp;&nbsp;Delivery</i> 
+                        </li>
+                      
+                    </ul>
+                </nav>
+            </div>
+
+                <div> <img src="/assets/images/foodlogo.png" alt=""></div>
+                <div> <i (click)="profile()"  style="margin-right: 11px;" class="bi bi-person-circle"></i>
+                <div class="profilebackground" *ngIf="profileopen">
+<div class="profilebody">
+    <div class="cancel">
+  <i (click)="profile()"  class="bi bi-x"></i>
+</div>
+    <div>
+    <i id="logo" class="bi bi-person-circle"></i>
+</div>
+<div *ngFor=" let item of tabledata" >
+    <h2 >Name:{{item.Name}}</h2>
+</div>
+<button (click)="logout()">logout</button> 
+
+
+</div>
+                </div>
+                
+                
+                </div>
+            </div>
+            <div class="search">
+                <div><i class="bi bi-search"></i>
+                  
+                            <input     type="text" placeholder="    Search" >
+                </div>
+
+             
+
+            </div>
+            <div class="headerpopup">
+<div>
+<p>Top Recipes</p>
+</div>
+<div class="headerpopbody">
+<div class="box">
+<div id="img">
+<img src="/assets/images/veg.jpg" alt="">
+</div>
+<div>
+<p> veg</p>
+</div>
+
+</div>
+<div class="box">
+    <div id="img">
+        <img src="/assets/images/nonveg.jpg" alt="">
+        </div>
+        <div>
+            <p> Non-Veg</p>
+            </div>
+
+</div>
+
+</div>
+
+<div class="headerpopbody">
+
+<div class="box">
+    <div id="img">
+        <img src="/assets/images/noodel.jpg" alt="">
+        </div>
+        <div>
+            <p> Noodels</p>
+            </div>
+
+</div>
+<div class="box">
+    <div id="img">
+        <img src="/assets/images/icecream.jpg"  alt="">
+        </div>
+        <div>
+            <p> Ice creams</p>
+            </div>
+
+</div>
+</div>
+
+  </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="body">
+
+<div class="cheffimage">
+
+
+<img src="/assets/images/chef.png" alt="">
+
+    
+
+         <div class="bodycontent">
+<div id="product">
+            <div class="productimg">
+                <i class="bi bi-bag-plus-fill"></i>
+            </div>
+            <div class="productdetails">
+<p (click)="showPopup1()">Add<br> Product</p>
+<div class="popup1" *ngIf="isPopupVisible1">Click menu!</div>
+
+            </div>
+        </div>
+    <div id="product">
+            <div class="productimg">
+                <i class="bi bi-building-add"></i>
+
+                
+            </div>
+            <div class="productdetails">
+<p (click)="showPopup2()">Add restaurant</p>
+<div class="popup2" *ngIf="isPopupVisible2">Click menu!</div>
+
+            </div>
+            </div>
+            <div id="product">
+                <div class="productimg">
+                    <i class="bi bi-bar-chart"></i>
+                    
+                </div>
+                <div class="productdetails">
+                    <p (click)="showPopup3()">Analysis</p>
+<div class="popup3" *ngIf="isPopupVisible3">Click menu!</div>
+
+                </div>
+
+                </div>
+                <div id="product">
+                    <div class="productimg">
+        
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <div class="productdetails">
+<p (click)="showPopup4()">Delivary</p>
+<div class="popup4" *ngIf="isPopupVisible4">Click menu!</div>
+
+
+                    </div>
+                    
+                    </div>
+
+
+         </div>
+        
+
+</div>
+
+
+
+    </div>
+    <div class="footer">
+        <p style="color: wheat;font-size: 1.3vh;">food@gmail.com</p>
+        </div>
+    </div>
+
+    

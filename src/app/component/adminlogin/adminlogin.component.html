@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="rgb(232, 217, 217)" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg><br>
+          <h1>admin login</h1>
+    </div>
+    
+       <div class="body">
+
+
+            <form  action="" id="login" >
+        <div class="input"  [style.border]="showErrorinvalid ? '0.3vh solid red':  '0.3vh solid transparent'"   [style.border]="showErroradminId ? '0.3vh solid red':  '0.3vh solid transparent'" >
+
+    <input type="text" id="login-admin" [(ngModel)]="adminId" name="adminId" autocomplete="off" required    >
+    <label for="">Admin-id  </label>
+    
+</div>
+<div id="eyeparent" class="input" [style.border]="showErrorinvalid ? '0.3vh solid red':  '0.3vh solid transparent'"     [style.border]="showErrorpassword ? '0.3vh solid red':  '0.3vh solid transparent'"  >
+    
+    <input type="{{ showon ? 'text' : 'password' }}" type="password" id="login-pwd" [(ngModel)]="password" name="password"   autocomplete="off" required >
+    <label for="">password </label>
+
+    <div id="eyechild">
+      
+          <svg (click)="eye()" *ngIf="showon; else showblock" id="svg"  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+            <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+            <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+          </svg>
+<ng-template #showblock>
+    <svg (click)="eye()"    xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray"  class="bi bi-eye-fill" viewBox="0 0 16 16">
+        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+      </svg>
+
+</ng-template>
+    </div>
+
+</div>
+<!-- <p>{{showErroradminId}}</p>
+<p>{{showErrorpassword}}</p>
+<p>{{showErrorinvalid}}</p> -->
+<!-- <p>{{showError}}</p> -->
+
+<div class="button">
+    <button  (click)="onSubmit()"  id="button">Login</button>
+</div>
+
+</form>
+
+
+    
+       </div>
+    
+
+    
+    </div>

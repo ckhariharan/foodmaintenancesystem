@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="header">
+<img src="/assets/images/platestafflogin.jpg" alt="">
+    </div>
+    <div class="body">
+    <div class="bhead">
+        <img src="/assets/images/foodlogo.png" alt="">
+    </div>
+        <div class="form">
+<form (ngSubmit)="onsubmit()"  action="">
+<input id="input" type="text" placeholder="StaffID" name="SID" [(ngModel)]="SID">
+<input id="input" type="number" placeholder="Phone" name="Phone" [(ngModel)]="Phone">
+<p>forgot password?</p>
+
+<h6>{{showError}}</h6>
+<button id="button" type="submit">Login</button>
+
+</form>
+
+         <img src="/assets/images/platestafflogin.jpg" alt="">
+        </div>
+    
+    </div>
+</div>

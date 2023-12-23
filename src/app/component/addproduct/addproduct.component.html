@@ -1,0 +1,141 @@
+<!-- <p>addproduct works!</p>
+<button (click)="logout()">logout</button> -->
+
+<div class="background">
+
+    <div  class="header">
+<div id="header" class="menus">
+    <input type="checkbox" id="menu">
+    <label for="menu" class="icon">
+            <div class="menu"></div>
+     </label>
+    
+    <nav>
+        <ul>
+            <li>
+                <i id="li" (click)="logout()" class="bi bi-house-fill">&nbsp;&nbsp;Home</i>
+            </li>
+            <li>
+                <i  id="li" class="bi bi-bag-plus-fill">&nbsp;&nbsp;Add_Product</i>
+            </li>
+            <li>
+                <i id="li" class="bi bi-building-add">&nbsp;&nbsp;Add_Restaurant</i>
+            </li>
+            <li>
+                <i id="li" class="bi bi-bar-chart">&nbsp;&nbsp;Analysis</i> 
+            </li>
+            <li>
+                <i id="li" class="bi bi-truck">&nbsp;&nbsp;Delivery</i> 
+            </li>
+          
+        </ul>
+    </nav>
+</div>
+<div id="header" class="img">
+    <img src="/assets/images/foodlogo.png" alt="">
+</div>
+
+<div id="header" class="notification">
+    <div>
+    <i class="bi bi-bell"></i>
+</div>
+<div [ngClass]="{'error1': showadd}" (click)="Analysis()" class="dot">
+    <p> </p>
+</div>
+</div>
+
+    </div>
+
+
+<div class="searchbackground">
+    <div class="search">
+        <div><i class="bi bi-search"></i>
+          
+                    <input    [(ngModel)]="searchTerm"  type="text" placeholder="    Search" (keyup)="searchEmployees()" >
+        </div>
+
+     
+
+    </div>
+</div>
+<div class="bodybackground">
+
+    <div class="h1">
+        <p>Add-product</p>
+    </div>
+
+  <div class="form" >
+    <form  (ngSubmit)="onSubmit()" [formGroup]="createProductForm">
+        <label>ImageUrl
+       <input type="text" placeholder="image URL" name="imgUrl" [(ngModel)]="imgUrl"  formControlName="imgUrl">  
+       <!-- <div *ngIf="createProductForm.get('imgUrl')!.invalid && (createProductForm.get('imgUrl')!.dirty || createProductForm.get('imgUrl')!.touched)">
+    </div> -->
+      <div id="Error" *ngIf="createProductForm.get('imgUrl')!.hasError('required')">{{showError1}}</div>
+      <div id="patternerror" *ngIf="createProductForm.get('imgUrl')!.hasError('pattern')">* Enter a valid image URL <br><br> (e.g., http://example.com/image.jpg).</div>
+    </label>
+    
+        <label for="">Product_Name
+        <input type="text" placeholder="name" name="Product Name" [(ngModel)]="Name" formControlName="Name">
+      <div id="Error" *ngIf="createProductForm.get('Name')!.hasError('required')">{{showError2}}</div>
+      <div id="patternerror" *ngIf="createProductForm.get('Name')!.hasError('pattern')">*Enter a valid name (only letters and spaces allowed).</div>
+    </label>
+        <label for="">Price
+        <input type="number" placeholder="price" name="Price" [(ngModel)]="Price" formControlName="Price"></label>
+      <div id="Error" *ngIf="createProductForm.get('Price')!.hasError('required')">{{showError3}}</div>
+      <div id="patternerror" *ngIf="createProductForm.get('Price')!.hasError('pattern')">*Enter a valid numeric value (only digits allowed).</div>
+        <label for="">Original_Price
+        <input type="number" placeholder="orginalPrice" name="orginalPrice" [(ngModel)]="OriginalPrice" formControlName="OriginalPrice">
+        <div id="Error" *ngIf="createProductForm.get('OriginalPrice')!.hasError('required')">{{showError4}}</div>
+        <div id="patternerror" *ngIf="createProductForm.get('OriginalPrice')!.hasError('pattern')">*Enter a valid numeric value (only digits allowed).</div></label>
+        <label for="">Offer
+        <input type="number" placeholder="offer" name="Offer" [(ngModel)]="Offer" formControlName="Offer">
+        <div id="Error" *ngIf="createProductForm.get('Offer')!.hasError('required')">{{showError4}}</div>
+        <div id="patternerror" *ngIf="createProductForm.get('Offer')!.hasError('pattern')">*Enter a valid numeric value (only digits allowed).</div></label>
+        <label for="">Stock
+        <input type="number" placeholder="stock" name="Stock" [(ngModel)]="Stock" formControlName="Stock">
+        <div id="Error" *ngIf="createProductForm.get('Stock')!.hasError('required')">{{showError6}}</div>
+        <div id="patternerror" *ngIf="createProductForm.get('Stock')!.hasError('pattern')">*Enter a valid numeric value (only digits allowed).</div></label>
+        <p></p>
+        <div >
+        <!-- <button (click)="resetFormFields()" *ngIf="!showEditButton" style="margin-right: 2vh; background-color: red;">Reset</button> -->
+        <button type="submit"  style="background-color:azure;color: black;" >ADD</button>
+        <button   (click)="save()" (click)="clearform()" >clear</button>
+        <button style="background-color: red;">Cancel</button>
+    </div>
+    <p>{{showError}}</p>
+    </form>
+  </div>
+<!-- 
+  <div class="image" >
+    <table>
+        <thead>
+            <tr>
+            <th>image</th>
+            <th>name</th>
+        <th>price</th>
+        <th>originalprice</th>
+        <th>offer</th>
+        <th>stock</th>
+    </tr>
+        </thead>
+        <tbody *ngFor="let p of tabledata">
+<tr>
+    <td >
+    <img src="{{p.imgUrl}}" alt="productImg">
+    </td>
+    <td>{{p.Name}}</td>
+    <td>{{p.Price}}</td>
+    <td>{{p.OriginalPrice}}</td>
+    <td>{{p.Offer}}</td>
+    <td>{{p.Stock}}</td>
+    <button (click)="delete(p.key)">delete</button>
+    <button (click)="update(p)">update</button>
+
+</tr>
+        </tbody>
+    </table>
+
+</div>
+ -->
+</div>
+</div>
