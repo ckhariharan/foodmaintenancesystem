@@ -24,6 +24,7 @@ export class StaffloginComponent  implements OnInit{
 
   showError: string = '';
   private unsubscribe$ = new Subject<void>();
+  loggedUser!: any;
 
 
 
@@ -61,8 +62,6 @@ checkUserExistence() {
   const usersRef = this.db.list('newstaffs', (ref) =>
     ref.orderByChild('Phone').equalTo(this.Phone)
   );
-  
-
   const users$: Observable<any[]> = usersRef.valueChanges();
 
   users$
@@ -70,10 +69,18 @@ checkUserExistence() {
     .subscribe((users) => {
       if (users.length > 0) {
         const foundUser = users.find(user => user.SID === this.SID);
+        console.log(users);
+        this.loggedUser = users[0]
+
         if (foundUser) {
-          localStorage.setItem('staff', this.Phone);
+          const user = foundUser;
+          console.log(user)
+   
+
           this.Phone = '';
           this.SID = '';
+    localStorage.setItem('staff', user.Phone);
+
           this.router.navigateByUrl('/staffdashboard');
     Swal.fire("Login SuccessFully", "", "success");
 

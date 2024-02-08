@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { SigninService } from 'src/app/services/signin.service';
-import Swal from 'sweetalert2';
 import { Title } from '@angular/platform-browser';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -41,7 +41,7 @@ this.showeye=!this.showeye;
  inviteFacebook() {
   // const textToShare = 'foodMaintanance project link: https://nproject-190cc.web.app/';
   // const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(textToShare)}`;
-  // window.open(facebookUrl, '_blank');
+  // window.open(facebookUrl, '_blank');  
   Swal.fire("Now The Service Is Not Available", "", "error");
 
 }

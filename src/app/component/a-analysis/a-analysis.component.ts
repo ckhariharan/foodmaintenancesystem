@@ -121,7 +121,11 @@ years: string[] = [];
 
     });
     }
-    
+    delete(data: string) {
+      this.newstaff.deletestaff(data);
+    }
+  
+
   validation()  {
     this.dob=`${this.selectedDay}/${this.selectedMonth}/${this.selectedYear}`
   

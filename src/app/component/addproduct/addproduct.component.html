@@ -71,7 +71,7 @@
        <!-- <div *ngIf="createProductForm.get('imgUrl')!.invalid && (createProductForm.get('imgUrl')!.dirty || createProductForm.get('imgUrl')!.touched)">
     </div> -->
       <div id="Error" *ngIf="createProductForm.get('imgUrl')!.hasError('required')">{{showError1}}</div>
-      <div id="patternerror" *ngIf="createProductForm.get('imgUrl')!.hasError('pattern')">* Enter a valid image URL <br><br> (e.g., http://example.com/image.jpg).</div>
+      <!-- <div id="patternerror" *ngIf="createProductForm.get('imgUrl')!.hasError('pattern')">* Enter a valid image URL <br><br> (e.g., http://example.com/image.jpg).</div> -->
     </label>
     
         <label for="">Product_Name
@@ -96,11 +96,11 @@
         <div id="Error" *ngIf="createProductForm.get('Stock')!.hasError('required')">{{showError6}}</div>
         <div id="patternerror" *ngIf="createProductForm.get('Stock')!.hasError('pattern')">*Enter a valid numeric value (only digits allowed).</div></label>
         <p></p>
-        <div >
+        <div class="add">
         <!-- <button (click)="resetFormFields()" *ngIf="!showEditButton" style="margin-right: 2vh; background-color: red;">Reset</button> -->
-        <button type="submit"  style="background-color:azure;color: black;" >ADD</button>
-        <button   (click)="save()" (click)="clearform()" >clear</button>
-        <button style="background-color: red;">Cancel</button>
+        <button id="add" type="submit"  style="background-color:azure;color: black;" >ADD</button>
+        <!-- <button   (click)="save()" (click)="clearform()" >clear</button>
+        <button style="background-color: red;">Cancel</button> -->
     </div>
     <p>{{showError}}</p>
     </form>

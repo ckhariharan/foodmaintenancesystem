@@ -149,3 +149,88 @@ box-shadow:
 
     /* z-index: -1; */
 }
+
+@media only screen and (min-width: 769px){
+
+
+.header{
+    /* background-color: red; */
+    height: 40vh;
+    width: 100%;
+
+}
+.header img{
+    height: 55vh;
+    width: 85%;
+    position: absolute;
+    top: -30vh;
+
+}
+.body{
+    /* background-color: rgb(14, 7, 7); */
+    height: 75vh;
+    width: 100% ;
+    flex-direction: column;
+    display: flex;
+}
+.body .bhead{
+    /* background-color: rgb(222, 70, 70); */
+    height: 20vh;
+    width: 100%;
+
+}
+.bhead img{
+    height: 21vh;
+    width:30%;
+    position: absolute;
+    top: -2.5vh;
+}
+.form{
+/* background-color: yellow; */
+height: 63vh;
+position: relative;
+overflow: hidden;
+
+
+}
+
+.form img{
+    position: absolute;
+    height: 45vh;
+    width: 39%;
+    border-radius: 50%;
+    right: -20vh;
+    bottom: -14vh;
+
+}
+
+.form form #input
+{
+
+width: 40%;
+height: 2vh;
+}
+form p{
+    padding: 1vh;
+    margin-inline-end: -30%;
+}
+button
+{
+    padding: 2vh;
+    width: 25%;
+}
+
+
+}
+
+@media only screen and (min-width: 420px) and (max-width: 767px){
+    .form img{
+        position: absolute;
+        height: 45vh;
+        width: 39%;
+        border-radius: 50%;
+        right: -15vh;
+        bottom: -14vh;
+    
+    }
+}

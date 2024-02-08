@@ -176,4 +176,22 @@ p{
 }
 
 
+@media only screen and (min-width: 769px){
+    
+    
+    .body .input {
+        position: relative;
+        width: 35%;
+        height: 40px;
+ 
+    }
+    
+
+    .button{
+        width: 30%;
+
+    }
+        
+}
+
 

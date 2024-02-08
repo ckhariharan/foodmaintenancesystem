@@ -44,6 +44,13 @@ export class EnrollnewstaffService {
         })
       );
     }
+    updatestaff(key: string, value: any) {
+      return this.staffcreate.update(key, value);
+      }
+    deletestaff(key: string): void {
+      this.staffcreate.remove(key);
+    }
+
   
 
     login(Phone: any): Observable<any[]> {
@@ -58,6 +65,16 @@ export class EnrollnewstaffService {
         .valueChanges()
     }
   
+ 
+    
+
+getUserDataByPhoneNumber(phoneNumber: any) {
+  // Replace 'users' with the actual path to your users in the database
+  const usersRef = this.db.list('/newstaffs', (ref) =>
+    ref.orderByChild('Phone').equalTo(Number(phoneNumber)));
+  
+  return usersRef.valueChanges(); // This returns an Observable of the data
+}
 
     createproduct(item: any): void {
       this.productcreate.push(item).then((response) => {

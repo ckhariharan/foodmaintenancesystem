@@ -55,7 +55,7 @@
 <!-- <td>{{item.day}}</td> -->
 <td>{{item.Section}}</td>
 <td id="editdelete"> <button id="editicon" (click)="edit(item)"><i class="bi bi-pencil-square"></i></button>
-  <button><i id="deleteicon" class="bi bi-trash3"></i></button>
+  <button (click)="delete(item.key)"><i id="deleteicon" class="bi bi-trash3"></i></button>
 </td>
 
           </tr>
