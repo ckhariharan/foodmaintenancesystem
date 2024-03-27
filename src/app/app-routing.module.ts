@@ -16,6 +16,8 @@ import { APanalysisComponent } from './component/a-panalysis/a-panalysis.compone
 import { StaffdashboardComponent } from './component/staffdashboard/staffdashboard.component';
 import { AddproductComponent } from './component/addproduct/addproduct.component';
 import { SAnalysisComponent } from './component/s-analysis/s-analysis.component';
+import { OauthComponent } from './component/oauth/oauth.component';
+
 
 const routes: Routes = [
 {path:'',component:MainComponent},
@@ -33,7 +35,9 @@ const routes: Routes = [
 {path:'staffdashboard',component:StaffdashboardComponent},
 {path:'firebasecrudop',component:FirebasecrudopComponent},
 {path:'addproduct',component:AddproductComponent},
-{path:'staffanalysis',component:SAnalysisComponent}
+{path:'staffanalysis',component:SAnalysisComponent},
+{path:'firebase',component:FirebasecrudopComponent},
+{path:'oauth',component:OauthComponent}
 
 ];
 

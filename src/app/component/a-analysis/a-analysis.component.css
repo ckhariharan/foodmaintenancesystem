@@ -1,6 +1,6 @@
 .conatiner {
     /* background-color: yellow; */
-    height: 100vh;
+    height: 93vh;
     /* max-height: 100vh; */
     width: 100%;
     overflow: hidden;
@@ -176,21 +176,27 @@ td button {
     /* background-color: red; */
     /* display: flex; */
     margin: 1vh;
-    font-size: 3vh;
+    font-size: 3.5vh;
     background-color: white;
     outline: none;
     border: none;
 }
 
 #editicon i {
-    color: rgb(0, 183, 255);
-    /* margin: 2vh; */
+    color:  rgb(0, 183, 255);
+background-color: #FBD6AB ;
 
 }
 
 #deleteicon {
+background-color: #FBD6AB ;
+
     color: red;
 }
+
+
+
+
 
 .outer-nav-bar {
     /* background-color: red; */
@@ -240,32 +246,171 @@ td button {
     width: 90%;
 }
 
+#deletebackground{
+    height: 95vh;
+    width: 93%;
+    background-color: rgba(83, 80, 80, 0.584);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+#deleteform{
+    background-color: white;
+    top: 50%;
+    left:50%;
+    position: relative;
+    transform: translate(-50%,-50%);
+    display: flex;
+    height: 40vh;
+    width: 70vw;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#deleteform button{
+    padding: 2vh;
+}
+#deletemessage{
+display: flex;
+}
+
 .editcontainer {
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     background-color: rgba(83, 80, 80, 0.584);
     position: fixed;
     z-index: 10;
     top: 0;
+    
 }
 
 .editform {
-    background-color: rgb(240, 237, 237);
+    background-color: #FBD6AB;
     box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff;
-
-    height: 50vh;
-    width: 90%;
-    position: fixed;
+    height: 65vh;
+    width: 85%;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    border-radius: 3vh;
 }
 
+.cancel{
+    background-color: #FBD6AB;
+    height: 5.5vh;
+    width: 9vw;
+    position: absolute;
+    top: -3vh;
+    right: -3vw;
+    border-radius: 1vh;
+    align-items:center;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #FBD6AB ;
+
+}
+.cancel i{
+    font-size: 5vh;
+    color: red;
+}
+form{
+    /* background-color: yellow; */
+    height: 55vh;
+    width: 85%;
+
+}
+.formheader{
+    background-color: #F4B733;
+    height:15vh ;
+    width: 100%;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+position: relative;
+box-shadow: 3px 3px 10px  #F4B733, -2px -2px 10px #F4B733;
+
+
+}
+.personborder{
+    position: absolute;
+    top: 6vh;
+    left: 30vw;
+    height: 15vh;
+    width: 25vw;
+    border-radius: 50%;
+    background-color: #FBD6AB;
+    align-items: center;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+.personborder i{
+    font-size: 10vh;
+}
+
+.input{
+    /* background-color: red; */
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 40vh;
+}
+.input h3{
+    z-index: 1;
+height: 1vh;
+}
+.inputhead{
+    margin-block-start: 2vh;
+    /* background-color: yellow; */
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    line-height: 1vh;
+}
+.inputhead input{
+    padding: 1vh;
+    border: none;
+    border-radius: 2px;
+    outline: none ;
+    margin-inline-start: 7vw;
+    width: 45vw;
+
+}
+
+ #select{
+    padding: 1vh;
+    border: none;
+    border-radius: 2px;
+    outline: none ;
+    background-color: white;
+    margin-inline-start: 2vw;
+    width: 50vw;
+}
+
+#update{
+    padding: 2.5vw;
+    margin-left: 30vw;
+    outline: none;
+    border: none;
+    border-radius: 1vh;
+    box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #FBD6AB ;
+    background-color: #FBD6AB ;
+    font-family: Gotham !important;
+    font-weight: 200;
+
+}
 
 @media only screen and (min-width: 769px) {
 
@@ -338,8 +483,7 @@ td button {
     }
 
     .hoverflow {
-        background-color: #B97AA0;
-        ;
+        background-color: #B97AA0;;
         position: absolute;
         height: 40vh;
         width: 58%;

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { SigninService } from 'src/app/services/signin.service';
 import { Title } from '@angular/platform-browser';
 import Swal from 'sweetalert2';
+import { GoogleApiService } from 'src/app/services/google-api.service';
 
 
 @Component({
@@ -19,8 +20,18 @@ export class LoginComponent implements OnInit {
   showeye: boolean = false;
 
 
-  constructor(public router: Router,private signin:SigninService,private title:Title) { }
+  constructor(public router: Router,private renderer: Renderer2,private signin:SigninService,private title:Title) { }
 
+  // ngAfterViewInit(): void {
+  //   this.addGoogleSignInScript();
+  // }
+
+  // private addGoogleSignInScript(): void {
+  //   const script = this.renderer.createElement('script');
+  //   script.src = 'https://accounts.google.com/gsi/client';
+  //   script.async = true;
+  //   this.renderer.appendChild(document.head, script);
+  // }
 
 
   ngOnInit(): void { 
@@ -119,6 +130,9 @@ validation() {
   }
 }
 
-
+oauth(){
+  this.router.navigateByUrl('/oauth');
+  
+}
 
 }

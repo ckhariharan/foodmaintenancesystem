@@ -47,6 +47,7 @@ export class EnrollnewstaffService {
     updatestaff(key: string, value: any) {
       return this.staffcreate.update(key, value);
       }
+      
     deletestaff(key: string): void {
       this.staffcreate.remove(key);
     }
